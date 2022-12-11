@@ -1,0 +1,139 @@
+.kaa-main-nav {
+	&__list {
+		position: relative;
+    line-height: 40px;
+    background: white;
+
+		&--parent {
+			display: inline-block;
+		}
+
+		&--child {
+			background: white;
+			padding: 0.5rem;
+			border-radius: 0.5rem;
+			//  $box-shadow-16;
+			box-shadow: 0px 4px 8px rgb(0 0 0 / 14%);
+		}
+	}
+
+	&__item {
+		display: block;
+		position: relative;
+		white-space: nowrap;
+		word-break: keep-all;
+	}
+
+	&__list,
+	&__list &__item,
+	&__list &__item > &__list--child {
+		list-style: none;
+		margin: 0px;
+	}
+
+	&__item > * {
+		display: block;
+		position: relative;
+	}
+
+	&__item > &__list--child {
+		position: absolute;
+		top: 0px;
+		left: 100%;
+		min-width: 100%;
+	}
+
+	&__list--parent > &__item > &__list--child {
+		top: auto;
+		left: auto;
+	}
+
+	/* Navbar list behavior */
+	&__item > &__list--child {
+		display: none;
+	}
+
+	&__item > &__list--visible {
+		display: block;
+	}
+
+	/* Navbar list animation */
+	&__item > &__list--child {
+		opacity: 1;
+		transform: scale(1) translateY(0px);
+		transform-origin: left top;
+	}
+
+	&__item > &__list--animating {
+		opacity: 0 !important;
+		transform: scale(0.96) translateX(-16px);
+		z-index: -1 !important;
+	}
+
+	&__list--parent > &__item > &__list--animating {
+		transform: scale(0.96) translateY(-16px);
+	}
+
+	/* Navbar list submenu */
+	&__list--child > &__item--submenu > &__link::after {
+		content: '';
+		display: block;
+    width: 8px;
+    height: 8px;
+		position: absolute;
+		top: 0px;
+    right: 8px;
+    bottom: 0px;
+    margin: auto 0px;
+    transform: rotate(45deg);
+    border-width: 1px;
+    border-color: #000000;
+    border-style: solid solid none none;
+	}
+
+  /* Configurable values Navbar list */
+	&__list--parent,
+  &__list &__item,
+  &__list &__item > :first-child {
+    height: 40px;
+  }
+
+  /* Padding for each menu item */
+  /*&__list &__item > * {
+    padding: 0px 12px;
+  }*/
+
+	&__list &__item &__item--submenu > &__link::after,
+	&__list:not(.kaa-main-nav__list--parent) > &__item--submenu > &__link::after {
+		right: 12px;
+	}
+
+  &__list &__item &__item--submenu > &__link,
+	&__list:not(.kaa-main-nav__list--parent) > &__item--submenu > &__link {
+    padding-right: 28px;
+  }
+
+	/* Minimum width of dropdown menus */
+	&__list--parent &__item > &__list--child {
+		min-width: 200px;
+	}
+
+	/* Animation speed of dropdown menus */
+  &__list &__item > &__list--child {
+    transition: width 0.1s, height 0.1s, transform 0.1s, opacity 0.1s;
+  }
+
+  &__item > &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__item > &__link:first-child {
+    transition: background-color 0.2s;
+  }
+
+  &__item:hover > &__link:first-child,
+  &__item--active > &__link:first-child {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

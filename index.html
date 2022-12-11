@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Navbar</title>
+  </head>
+  <body>
+    <header style="background: black;">
+      <nav class="kaa-main-nav">
+				<ul class="kaa-main-nav__list kaa-main-nav__list--parent">
+					<li class="kaa-main-nav__item kaa-main-nav__item--submenu">
+						<a class="kaa-main-nav__link" href="#">Item</a>
+						<ul class="kaa-main-nav__list kaa-main-nav__list--child">
+							<li class="kaa-main-nav__item">
+								<a class="kaa-main-nav__link" href="#">Bacon</a>
+							</li>
+							<li class="kaa-main-nav__item">
+								<a class="kaa-main-nav__link" href="#">Ipsum</a>
+							</li>
+							<li class="kaa-main-nav__item kaa-main-nav__item--submenu">
+								<a class="kaa-main-nav__link" href="#">Sub-menu</a>
+								<ul class="kaa-main-nav__list kaa-main-nav__list--child">
+									<li class="kaa-main-nav__item">
+										<a class="kaa-main-nav__link" href="#">Bacon</a>
+									</li>
+									<li class="kaa-main-nav__item">
+										<a class="kaa-main-nav__link" href="#">Ipsum</a>
+									</li>
+									<li class="kaa-main-nav__item">
+										<a class="kaa-main-nav__link" href="#">Dolor</a>
+									</li>
+									<li class="kaa-main-nav__item">
+										<a class="kaa-main-nav__link" href="#">Amet</a>
+									</li>
+								</ul>
+							</li>
+							<li class="kaa-main-nav__item">
+								<a class="kaa-main-nav__link" href="#">Dolor</a>
+							</li>
+							<li class="kaa-main-nav__item">
+								<a class="kaa-main-nav__link" href="#">Amet</a>
+							</li>
+							<li class="kaa-main-nav__item kaa-main-nav__item--submenu">
+								<a class="kaa-main-nav__link" href="#">Another Sub-menu</a>
+								<ul class="kaa-main-nav__list kaa-main-nav__list--child">
+									<li class="kaa-main-nav__item">
+										<a class="kaa-main-nav__link" href="#">Bacon</a>
+									</li>
+									<li class="kaa-main-nav__item">
+										<a class="kaa-main-nav__link" href="#">Ipsum</a>
+									</li>
+									<li class="kaa-main-nav__item kaa-main-nav__item--submenu">
+										<a class="kaa-main-nav__link" href="#">Sub-sub-menu!</a>
+										<ul class="kaa-main-nav__list kaa-main-nav__list--child">
+											<li class="kaa-main-nav__item">
+												<a class="kaa-main-nav__link" href="#">Bacon</a>
+											</li>
+											<li class="kaa-main-nav__item">
+												<a class="kaa-main-nav__link" href="#">Ipsum</a>
+											</li>
+											<li class="kaa-main-nav__item">
+												<a class="kaa-main-nav__link" href="#">Dolor</a>
+											</li>
+											<li class="kaa-main-nav__item">
+												<a class="kaa-main-nav__link" href="#">Amet</a>
+											</li>
+										</ul>
+									</li>
+									<li class="kaa-main-nav__item">
+										<a class="kaa-main-nav__link" href="#">Dolor</a>
+									</li>
+									<li class="kaa-main-nav__item">
+										<a class="kaa-main-nav__link" href="#">Amet</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+    </header>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
